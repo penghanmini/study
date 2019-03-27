@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>4equalParts2</title>
+	</head>
+	<style type="text/css">
+		.roll{
+			text-align: center;
+			font-size: 120px;
+			display: flex;
+			flex-flow: nowrap row;
+			justify-content: center;
+			align-items: center;
+			margin-top: 400px;
+			height: 260px;
+		}
+		.imgRoll1{
+			height: 260px;
+			transform-style: preserve-3d;
+			transform:rotateX(45deg) rotateZ(45deg);
+			animation: star1 16s linear infinite;
+		}
+		@keyframes star1{
+			0%{transform: rotateX(0deg);}
+			2%{transform: rotateX(-90deg);}
+			25%{transform: rotateX(-90deg);}
+			27%{transform: rotateX(-180deg);}
+			50%{transform: rotateX(-180deg);}
+			52%{transform: rotateX(-270deg);}
+			75%{transform: rotateX(-270deg);}
+			77%{transform: rotateX(-360deg);}
+			100%{transform: rotateX(-360deg);}
+		}
+		.first1{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(180deg) translateZ(130px);
+			clip: rect(0px 100px 260px 0px);
+		}
+		.second1{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: translateZ(130px);
+			clip: rect(0px 100px 260px 0px);
+		}
+		.third1{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(-90deg) translateZ(130px);
+			clip: rect(0px 100px 260px 0px);
+		}
+		.four1{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(90deg) translateZ(130px);
+			clip: rect(0px 100px 260px 0px);
+		}
+		.imgRoll2{
+			height: 260px;
+			transform-style: preserve-3d;
+			transform:rotateX(45deg) rotateZ(45deg);
+			animation: star2 16s linear infinite;
+		}
+		@keyframes star2{
+			0%{transform: rotateX(0deg);}
+			1%{transform: rotateX(0deg);}
+			3%{transform: rotateX(-90deg);}
+			26%{transform: rotateX(-90deg);}
+			28%{transform: rotateX(-180deg);}
+			51%{transform: rotateX(-180deg);}
+			53%{transform: rotateX(-270deg);}
+			76%{transform: rotateX(-270deg);}
+			78%{transform: rotateX(-360deg);}
+			100%{transform: rotateX(-360deg);}
+		}
+		.first2{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(180deg) translateZ(130px);
+			clip: rect(0px 200px 260px 100px);
+		}
+		.second2{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: translateZ(130px);
+			clip: rect(0px 200px 260px 100px);
+		}
+		.third2{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(-90deg) translateZ(130px);
+			clip: rect(0px 200px 260px 100px);
+		}
+		.four2{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(90deg) translateZ(130px);
+			clip: rect(0px 200px 260px 100px);
+		}
+		.imgRoll3{
+			height: 260px;
+			transform-style: preserve-3d;
+			transform:rotateX(45deg) rotateZ(45deg);
+			animation: star3 16s linear infinite;
+		}
+		@keyframes star3{
+			0%{transform: rotateX(0deg);}
+			2%{transform: rotateX(0deg);}
+			4%{transform: rotateX(-90deg);}
+			27%{transform: rotateX(-90deg);}
+			29%{transform: rotateX(-180deg);}
+			52%{transform: rotateX(-180deg);}
+			54%{transform: rotateX(-270deg);}
+			77%{transform: rotateX(-270deg);}
+			79%{transform: rotateX(-360deg);}
+			100%{transform: rotateX(-360deg);}
+		}
+		.first3{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(180deg) translateZ(130px);
+			clip: rect(0px 300px 260px 200px);
+		}
+		.second3{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: translateZ(130px);
+			clip: rect(0px 300px 260px 200px);
+		}
+		.third3{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(-90deg) translateZ(130px);
+			clip: rect(0px 300px 260px 200px);
+		}
+		.four3{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(90deg) translateZ(130px);
+			clip: rect(0px 300px 260px 200px);
+		}
+		.imgRoll4{
+			height: 260px;
+			transform-style: preserve-3d;
+			transform:rotateX(45deg) rotateZ(45deg);
+			animation: star4 16s linear infinite;
+		}
+		@keyframes star4{
+			0%{transform: rotateX(0deg);}
+			3%{transform: rotateX(0deg);}
+			5%{transform: rotateX(-90deg);}
+			28%{transform: rotateX(-90deg);}
+			30%{transform: rotateX(-180deg);}
+			53%{transform: rotateX(-180deg);}
+			55%{transform: rotateX(-270deg);}
+			78%{transform: rotateX(-270deg);}
+			80%{transform: rotateX(-360deg);}
+			100%{transform: rotateX(-360deg);}
+		}
+		.first4{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(180deg) translateZ(130px);
+			clip: rect(0px 400px 260px 300px);
+		}
+		.second4{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: translateZ(130px);
+			clip: rect(0px 400px 260px 300px);
+		}
+		.third4{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(-90deg) translateZ(130px);
+			clip: rect(0px 400px 260px 300px);
+		}
+		.four4{
+			height: 260px;
+			width: 400px;
+			position: absolute;
+			transform: rotateX(90deg) translateZ(130px);
+			clip: rect(0px 400px 260px 300px);
+		}
+	</style>
+	<body>
+		<div class="roll">
+			<div class="imgRoll1">
+				<img src="../img/cat.jpg" class="first1" >
+				<img src="../img/flower.jpg" class="second1" >
+				<img src="../img/pink壁纸.jpg" class="third1" >
+				<img src="../img/timg.jpg" class="four1" >
+			</div>
+			<div class="imgRoll2">
+				<img src="../img/cat.jpg" class="first2" >
+				<img src="../img/flower.jpg" class="second2" >
+				<img src="../img/pink壁纸.jpg" class="third2" >
+				<img src="../img/timg.jpg" class="four2" >
+			</div>
+			<div class="imgRoll3">
+				<img src="../img/cat.jpg" class="first3" >
+				<img src="../img/flower.jpg" class="second3" >
+				<img src="../img/pink壁纸.jpg" class="third3" >
+				<img src="../img/timg.jpg" class="four3" >
+			</div>
+			<div class="imgRoll4">
+				<img src="../img/cat.jpg" class="first4" >
+				<img src="../img/flower.jpg" class="second4" >
+				<img src="../img/pink壁纸.jpg" class="third4" >
+				<img src="../img/timg.jpg" class="four4" >
+			</div>
+		</div>
+	</body>
+
+</html>

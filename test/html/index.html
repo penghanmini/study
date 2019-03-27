@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>test</title>
+		<script type="text/javascript" src="js/echarts.min.js"></script>
+		<style type="text/css">
+			/* -webkit-text-stroke学习 */
+			h1{
+				color: transparent;
+				-webkit-text-stroke: 1px red;
+			}
+			a{
+				-webkit-tap-highlight-color: rgba(255,0,0,0.5);
+				text-decoration: none;
+			}
+			span{
+				border: 1px solid #FF0000;
+				font-size: 20px;
+				font-weight: bolder;
+				color: black;
+				-webkit-text-stroke: 1px greenyellow;
+			}
+			/* 定位学习 */
+			.father{
+				position: relative;
+				height: 500px;
+				width: 100%;
+				border: 1px solid brown;
+			}
+			.son{
+				position: absolute;
+				top: 10px;
+				left: 20px;
+				height: 100px;
+				width: 200px;
+				border: 1px solid cadetblue;
+			}
+			.text{
+				position: absolute;
+			}
+			.map{
+				position: relative;
+				height: 600px;
+				width: 800px;
+				margin-left: 100px;
+				background-image: url(img/地图@2x.png);
+				background-size: auto 100%;
+				background-position: calc(Math.PI*5);
+			}
+			/* 地图动态学习 */
+			.canvas1,.canvas2,.canvas3{
+				border-radius: 50%;
+				background-color: #000000;
+				opacity: 1;
+				animation: star 1.5s infinite;
+			}
+			@keyframes star{
+				0%{opacity: .5;}
+				10%{opacity: .4;}
+				20%{opacity: .3;}
+				30%{opacity: .2;}
+				40%{opacity: .1;}
+				50%{opacity: 0;}
+				60%{opacity: .1;}
+				70%{opacity: .2;}
+				80%{opacity: .3;}
+				90%{opacity: .4;}
+				100%{opacity: .5;}
+			}
+			.canvas1{
+				height: 25px;
+				width: 25px;
+				position: absolute;
+				top: 74px;
+				left: 265px;
+			}
+			.canvas2{
+				height: 25px;
+				width: 25px;
+				position: absolute;
+				top: 95px;
+				left: 439px;
+			}
+			.canvas3{
+				height: 23px;
+				width: 23px;
+				position: absolute;
+				top: 108px;
+				left: 564px;
+			}
+			.c1_detail,.c2_detail,.c3_detail{
+				height: 100px;
+				width: 100px;
+				background-color: #5F9EA0;
+				opacity: 0.3;
+			}
+			.c1_detail{
+				position: absolute;
+				top: -50px;
+				left: 225px;
+			}
+			.c2_detail{
+				position: absolute;
+				top: -25px;
+				left: 404px;
+			}
+			.c3_detail{
+				position: absolute;
+				top: -13px;
+				left: 525px;
+			}
+			/* Echarts学习 */
+			#main1{
+				width: 600px;
+				height: 600px;
+				border: 1px solid #5F9EA0;
+			}
+			#main2{
+				height: 500px;
+				width: 500px;
+				border: 1px solid #5F9EA0;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 镂空字体 -->
+		<div>
+			<h1>熊猫宝宝</h1>
+			<a href="https://www.baidu.com/">百度</a>
+			<span>瓜皮大壮顶呱呱</span>
+		</div>
+		<!-- 定位学习 -->
+		<div class="father">
+			<div class="son">
+				<span class="text">嘻嘻</span>
+			</div>
+		</div>
+		<!-- 地图动态 -->
+		<div class="map">
+			<div class="canvas1"></div>
+			<div class="canvas2"></div>
+			<div class="canvas3"></div>
+			<div class="c1_detail"></div>
+			<div class="c2_detail"></div>
+			<div class="c3_detail"></div>
+		</div>
+		<!-- Echarts表格学习 -->
+		<div id="main1"></div>
+		<script>
+			var myChart = echarts.init(document.getElementById("main1"));
+			var option = {
+				title:{},
+				tooltip:{},
+				legend:{
+					data:['销量','库存'],
+				},
+				xAxis:{
+					data: ['保湿品','连衣裙','高跟鞋','香水','口红']
+					
+				},
+				yAxis:{},
+				series:[{
+					name: '销量',
+					type: 'bar',
+					data: [5,10,20,30,40]
+				},{
+					name: '总量',
+					type: 'bar',
+					data: [50,100,200,300,400]
+				},]
+			}
+			myChart.setOption(option);
+		</script>
+		<div id="main2"></div>
+		<script>
+			var myChart = echarts.init(document.getElementById("main2"));
+			var option = {
+				title:{
+					text: "销量"
+				},
+				series:[{
+					name: '销量',
+					type: 'pie',
+					data:[
+						{name: '衣服',value: 200},
+						{name: '帽子',value: 100},
+						{name: '首饰',value: 150},
+						{name: '口红',value: 300},
+						{name: '高跟鞋',value: 160},
+						{name: '香水',value: 90}
+					]
+				}]
+			}
+			myChart.setOption(option);
+		</script>
+	</body>
+</html>

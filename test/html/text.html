@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str1 = "bit,tinyint,smallint,meduimint,int,integer,bigint,double,float,decimal,numeric,DECIMAL,FLOAT,INT,INTEGER,LONG,LONG RAW,NUMBER,NUMERIC,SMALLINT,bigint,decimal,float,int,money,numeric,smallint,tinyint";
+		var arr1 = [];
+		str1 = str1.toLowerCase();
+		arr1 = str1.split(",");
+		arr1 = test(arr1);
+		str1 = arr1.join(",");
+		console.log(str1);
+		var str2 = "char,varchar,tinytext,text,mediumtext,longtext,CHAR,CHAR VARYING,CHARACTER,CHARACTER VARYING,NCHAR,NCHAR VARYING,NVARCHAR2,char,nchar,ntext,nvarchar,nvarchar(max),text,varchar,varchar(max)";
+		str2 = str2.toLowerCase();
+		var arr2 = [];
+		arr2 = str2.split(",");
+		arr2 = test(arr2);
+		str2 = arr2.join(",");
+		console.log(str2);
+		var str3 = "TIMESTAMP WITH LOCAL TIME ZONE,TIMESTAMP,TIMESTAMP WITH TIME ZONE,date,time,datetime,timestamp,datetime2,smalldatetime";
+		var arr3 = [];
+		str3 = str3.toLowerCase();
+		arr3 = str3.split(",");
+		arr3 = test(arr3);
+		str3 = arr3.join(",");
+		console.log(str3);
+		function test(arr){
+			for(var i = 0; i < arr.length-1; i++){
+				for(var j = i+1; j < arr.length; j++){
+					if(arr[i]==arr[j]){
+						arr.splice(j,1);
+						j--;
+					}
+				}
+			}
+			return arr;
+		}
+	</script>
+</html>

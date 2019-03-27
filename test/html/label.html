@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>纯CSS3带阴影贴纸标签特效</title>
+		<style type="text/css">
+			#main{
+				margin: 100px;
+			}
+			.label{
+				height: 50px;
+				width: 200px;
+				text-align: right;
+				background: linear-gradient(to right,#abbd73 35%,#d6e2ad 100%);
+				color: #FFFFFF;
+				line-height: 50px;
+				padding-right: 20px;
+				border-radius: 4px;
+				box-shadow: 1px 2px 1px -1px #777;
+			}
+			.label:hover{
+				background: linear-gradient(to right,#abbd73 35%,#abbd73 100%);
+			}
+			.shadow{
+				position: relative;
+			}
+			.shadow:before{
+				z-index: -1;
+				box-shadow: 0 15px 10px #777;
+				position: absolute;
+				transform: rotate(4deg);
+				content: '';
+				bottom: 13px;
+				right: 7px;
+				top: 0;
+				width: 70%;
+				/* transition: all 150ms ease-in-out; */
+			}
+			.shadow:hover::before{
+				transform: rotate(0deg);
+				bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div class="label shadow">
+				网页特效
+			</div>
+		</div>
+	</body>
+</html>

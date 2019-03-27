@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>swatch</title>
+		<style type="text/css">
+			.swatch{
+				height: 50px;
+				width: 100px;
+				border: none;
+				background: #EBEEF5;
+				border-radius: 40px;
+				padding: 5px;
+				position: relative;
+			}
+			.circle{
+				height: 50px;
+				width: 50px;
+				border: none;
+				background: #FFFFFF;
+				border-radius: 50%;
+				position: absolute;
+				left: 5px;
+				top: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div class="swatch" onclick="clickSwatch()">
+				<div class="circle"></div>
+			</div>
+		</div>
+		<script src="../js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var swatch = false;
+			function clickSwatch(){
+				if(swatch){
+					$('.swatch').css({'background':'#67C23A','transition':'background 0.1s'});
+					$('.circle').css({'left':'55px','transition':'left 0.5s'});
+				}
+				else{
+					$('.swatch').css({'background':'#EBEEF5','transition':'background 0.1s'});
+					$('.circle').css({'left':'5px','transition':'left 0.5s'});
+				}
+				swatch = !swatch;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>loading</title>
+		<style type="text/css">
+			body{
+				background-color: #013951;
+			}
+			#main{
+				margin: 100px;
+			}
+			.loading{
+				height: 40px;
+				width: 40px;
+				transform-origin: 25% 25%;
+				transition-timing-function: linear;
+				animation: loading 2s infinite;
+				/* background-color: #FFFF00; */
+			}
+			@keyframes loading{
+				0%{transform: rotate(0deg);}
+				100%{transform: rotate(360deg);}
+			}
+			.c{
+				width: 10px;
+				height: 10px;
+				border: none;
+				border-radius: 50%;
+				position: relative;
+			}
+			
+			.c1{
+				/* 蓝色 */
+				background-color: #409EFF;
+				position: absolute;
+				top:2px;
+				left: 2px;
+				animation: blue 0.5s infinite;
+			}
+			@keyframes blue{
+				0%{top:2px; left: 2px;}
+				50%{top:-5px; left: -5px;}
+				100%{top:2px; left: 2px;}
+			}
+			.c2{
+				/* 绿色 */
+				background-color: #67C23A;
+				position: absolute;
+				top: 8px;
+				left: 8px;
+				animation: green 0.5s infinite;
+			}
+			@keyframes green{
+				0%{top:8px; left: 8px;}
+				50%{top:15px; left: 15px;}
+				100%{top:8px; left: 8px;}
+			}
+			.c3{
+				/* 黄色 */
+				background-color: #E6A23C;
+				position: absolute;
+				top: 2px;
+				left: 8px;
+				animation: yellow 0.5s infinite;
+			}
+			@keyframes yellow{
+				0%{top:2px; left: 8px;}
+				50%{top:-5px; left: 15px;}
+				100%{top:2px; left: 8px;}
+			}
+			.c4{
+				/* 红色 */
+				background-color: #F56C6C;
+				position: absolute;
+				top: 8px;
+				left: 2px;
+				animation: red 0.5s infinite;
+			}
+			@keyframes red{
+				0%{top:8px; left: 2px;}
+				50%{top:15px; left: -5px;}
+				100%{top:8px; left: 2px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div class="loading">
+				<div class="c c1"></div>
+				<div class="c c2"></div>
+				<div class="c c3"></div>
+				<div class="c c4"></div>
+			</div>
+		</div>
+	</body>
+</html>

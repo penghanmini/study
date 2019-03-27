@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>大乐透</title>
+		<style type="text/css">
+			body{
+				background-color: #EBEEF5;
+			}
+			.main{
+				width: 94%;
+				margin: 3%;
+				background-color: #FFFFFF;
+			}
+			h3{
+				color: #606266;
+			}
+			.brings{
+				width: 30%;
+				padding: 50px;
+			}
+			.btn{
+				height: 40px;
+				width: 120px;
+				color: #409EFF;
+				background-color: #FFFFFF;
+				border: 1px solid #409EFF;
+				border-radius: 5px;
+				outline: none;
+			}
+			.btn:hover{
+				background-color: #409EFF;
+				color: #F7F9FC;
+			}
+			#text{
+				color: #606266;
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="brings">
+				<h3>大乐透</h3>
+				<button class="btn" onclick="getBrings()">获取随机一注</button>
+				<button class="btn" onclick="deleteBrings()">清空</button>
+				<div id="text"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		    //大乐透
+			var brings = 1;
+			function getBrings(){
+				let int;
+				let array1 = [];
+				let sum = '';
+				while(array1.length < 5){
+					int = Math.floor(Math.random() * 100 % 35)+1;
+					if(checkRepeat(int,array1)){
+						array1.push(int);
+					}
+				}
+				while(array1.length < 7){
+					int = Math.floor(Math.random() * 100 % 12)+1;
+					if(checkRepeat(int,array1)){
+						array1.push(int);
+					}
+				}
+				//检查重复
+				function checkRepeat(num,array){
+					for(let i=0; i<array.length; i++){
+						if(array[i] == int){
+							return false;
+						}
+					}
+					return true;
+				}
+				for(let i=0; i<7; i++){
+					sum = sum + ' ' + array1[i];
+				}
+				var t = document.getElementById("text").innerHTML + "<p>第" + brings +"注: " + sum + "</p>";
+				document.getElementById("text").innerHTML = t;
+				brings++;
+			};
+			function deleteBrings(){
+				document.getElementById("text").innerHTML = "";
+				brings = 1;
+			};
+		</script>
+	</body>
+</html>

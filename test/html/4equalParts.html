@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>4equalParts1</title>
+	</head>
+	<style type="text/css">
+		.roll{
+			text-align: center;
+			font-size: 120px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 350px;
+		}
+		.imgRoll{
+			height: 500px;
+			transform-style: preserve-3d;
+			clip: rect(0px 200px 500px 500px);
+			animation: star 20s infinite;
+		}
+		@keyframes star{
+			0%{transform: rotateX(0deg);}
+			12%{transform: rotateX(-90deg);}
+			25%{transform: rotateX(-90deg);}
+			37%{transform: rotateX(-180deg);}
+			50%{transform: rotateX(-180deg);}
+			62%{transform: rotateX(-270deg);}
+			75%{transform: rotateX(-270deg);}
+			87%{transform: rotateX(-360deg);}
+			100%{transform: rotateX(-360deg);}
+		}
+		.a{
+			display: flex;
+			flex-flow: nowrap row;
+		}
+		.a div{
+			height: 500px;
+			width: 200px;
+		}
+		.a1{
+			transform-origin: bottom center;
+			animation: star1 5s infinite;
+		}
+		.a2{
+			transform-origin: bottom center;
+			animation: star2 5s infinite;
+		}
+		.a3{
+			transform-origin: bottom center;
+			animation: star3 5s infinite;
+		}
+		.a4{
+			transform-origin: bottom center;
+			animation: star4 5s infinite;
+		}
+		@keyframes star1{
+			0%{transform: rotateX(0deg);}
+			20%{transform: rotateX(-90deg);}
+			100%{transform: rotateX(-90deg);}
+		}
+		@keyframes star2{
+			0%{transform: rotateX(0deg);}
+			30%{transform: rotateX(-90deg);}
+			100%{transform: rotateX(-90deg);}
+		}
+		@keyframes star3{
+			0%{transform: rotateX(0deg);}
+			40%{transform: rotateX(-90deg);}
+			100%{transform: rotateX(-90deg);}
+		}
+		@keyframes star4{
+			0%{transform: rotateX(0deg);}
+			50%{transform: rotateX(-90deg);}
+			100%{transform: rotateX(-90deg);}
+		}
+		.first{
+			height: 500px;
+			width: 800px;
+			background-image: url(../img/cat.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			transform: rotateX(180deg) translateZ(250px);
+		}
+		.second{
+			height: 500px;
+			width: 800px;
+			background-image: url(../img/flower.jpg);
+			background-size: 100% 100%;
+			position: relative;
+			top: 0;
+			transform: translateZ(250px);
+		}
+		.third{
+			height: 500px;
+			width: 800px;
+			background-image: url(../img/pink壁纸.jpg);
+			background-size: 100% 100%;
+			position: relative;
+			transform: rotateX(90deg) translateZ(750px);
+		}
+		.four{
+			height: 500px;
+			width: 800px;
+			background-image: url(../img/timg.jpg);
+			background-size: 100% 100%;
+			position: relative;
+			bottom: 0px;
+			transform: rotateX(-90deg) translateZ(-750px);
+		}
+	</style>
+	<body>
+		<div class="roll">
+			<div class="imgRoll">
+				<div class="first a">
+					<div class="a1">1</div>
+					<div class="a2">2</div>
+					<div class="a3">3</div>
+					<div class="a4">4</div>
+				</div>
+				<div class="second a">
+					<div class="a1">1</div>
+					<div class="a2">2</div>
+					<div class="a3">3</div>
+					<div class="a4">4</div>
+				</div>
+				<div class="third a">
+					<div class="a1">1</div>
+					<div class="a2">2</div>
+					<div class="a3">3</div>
+					<div class="a4">4</div>
+				</div>
+				<div class="four a">
+					<div class="a1">1</div>
+					<div class="a2">2</div>
+					<div class="a3">3</div>
+					<div class="a4">4</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

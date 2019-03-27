@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js常用通用函数</title>
+	</head>
+	<body>
+		<div id="main"></div>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		//例如删除C这个元素 ，前提不知道C在这个数组的下标
+		var arr = ['a','b','c','d'];
+		console.log(arr)	
+		arr.splice($.inArray('c',arr),1);
+		console.log(arr)	
+		var temp = "<span>删除C这个元素 ，前提不知道C在这个数组的下标:&nbsp;&nbsp;<span>";
+		for(let i=0;i<arr.length;i++){
+			temp += "<span>"+arr[i]+"</span>"
+		}
+		document.getElementById("main").innerHTML = temp + "<br />";
+	</script>
+</html>
